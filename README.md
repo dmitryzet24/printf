@@ -2,7 +2,7 @@
 
 # ft_printf — Because ft_putnbr() and ft_putstr() aren't enough
 
-## 📝 Project Description
+## Project Description
 
 The main objective of **ft_printf** project is to completely recode the standard `printf` function found in the system C library (`libc`). 
 
@@ -90,7 +90,7 @@ In push_swap, your application must manage two stacks (a and b) and print exact 
 	```C
 	ft_printf("Stack A [%i] -> Top: %d | Bottom: %d | Node Ptr: %p\n", index, stack_a->value, stack_a->prev->value, stack_a);
 	```
-This: prevents you from having to daisy-chain distinct ft_putstr and ft_putnbr functions for every minor attribute inside a doubly-linked list node.
+This prevents you from having to daisy-chain distinct ft_putstr and ft_putnbr functions for every minor attribute inside a doubly-linked list node.
 
 ## Resources & AI Disclosure
 Reference Material and Documentation:
