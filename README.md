@@ -86,10 +86,11 @@ In push_swap, your application must manage two stacks (a and b) and print exact 
     ```
   2. Visualizing Stack State (Debugging):
 	When tracking the sorting flow of complex sorting routines (e.g., Radix or the Turk Algorithm), visualizing stack data splits becomes necessary. ft_printf allows you to render a clear terminal debugging interface in a single execution line:
-    ```C
+
+	```C
 	ft_printf("Stack A [%i] -> Top: %d | Bottom: %d | Node Ptr: %p\n", index, stack_a->value, stack_a->prev->value, stack_a);
 	```
-	This prevents you from having to daisy-chain distinct ft_putstr and ft_putnbr functions for every minor attribute inside a doubly-linked list node.
+This: prevents you from having to daisy-chain distinct ft_putstr and ft_putnbr functions for every minor attribute inside a doubly-linked list node.
 
 ## Resources & AI Disclosure
 Reference Material and Documentation:
