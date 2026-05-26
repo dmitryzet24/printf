@@ -6,7 +6,7 @@
 #    By: dandrush <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/26 14:37:38 by dandrush          #+#    #+#              #
-#    Updated: 2026/05/26 14:38:23 by dandrush         ###   ########.fr        #
+#    Updated: 2026/05/26 16:10:02 by dandrush         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ AR = ar rcs
 LIBFT_DIR = ./libft
 LIBFT = $(LIBFT_DIR)/libft.a
 
-SRCS = ft_printf.c ft_utils.c ft_hex_utils.c
+SRCS = ft_printf.c ft_utils.c
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
@@ -31,7 +31,7 @@ $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
 
 %.o: %.c ft_printf.h
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -I$(LIBFT_DIR) -c $< -o $@
 
 clean:
 	@make clean -C $(LIBFT_DIR)
