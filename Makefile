@@ -17,21 +17,28 @@ CFLAGS = -Wall -Wextra -Werror
 RM = rm -f
 AR = ar rcs
 
+LIBFT_DIR = ./libft
+LIBFT = $(LIBFT_DIR)/libft.a
+
 SRCS = ft_printf.c ft_utils.c ft_hex_utils.c
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
+	@make -C $(LIBFT_DIR)
+	@cp $(LIBFT) $(NAME)
 	$(AR) $(NAME) $(OBJS)
 
 %.o: %.c ft_printf.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
+	@make clean -C $(LIBFT_DIR)
 	$(RM) $(OBJS)
 
 fclean: clean
+	@make fclean -C $(LIBFT_DIR)
 	$(RM) $(NAME)
 
 re: fclean all
