@@ -14,7 +14,7 @@ Through this project, a critical mechanism of the C language is mastered: **vari
 
 ---
 
-## ⚙️ Compilation and Build Instructions
+## Compilation and Build Instructions
 
 `Makefile`: Source files are compiled using `cc` along with the mandatory strict error-handling flags: `-Wall -Wextra -Werror`.
 
@@ -33,7 +33,7 @@ cc -Wall -Wextra -Werror main.c -L. -lftprintf -o my_program
 ```
 The -L. flag tells the linker to look for libraries in the current directory, while -lftprintf links the libftprintf.a file.
 
-## 🛠️ Supported Conversion Specifiers
+## Supported Conversion Specifiers
 | Specifier | Data Type	| Behavioral Details & System Handling |
 |:---|:---|:---|
 |%c			|char		|Prints a single character. Due to Type Promotion rules in variadic arguments, it is retrieved via va_arg as an int.|
@@ -46,7 +46,7 @@ The -L. flag tells the linker to look for libraries in the current directory, wh
 |%X	    |unsigned int	|Converts and prints numbers in hexadecimal format (Base 16) using uppercase characters (0123456789ABCDEF).|
 |%%	    |None	  |Prints a single literal percent sign character %.|
 
-## 📐 Algorithms & Data Structures
+## Algorithms & Data Structures
 1. Architectural Pattern: Flag Dispatching
 
 The project avoids bulky data structures since the mandatory part requires a linear parser. Instead, a Single-pass parsing algorithm is utilized across the format string:
@@ -69,7 +69,7 @@ To convert numbers into decimal and hexadecimal bases, a recursive integer divis
 
 To display memory addresses accurately via the %p specifier, the integer type uintptr_t (from <stdint.h>) is chosen. Standard data types like unsigned int or unsigned long can vary between 4 and 8 bytes depending on system architectures, which would cause truncation of a 64-bit pointer address (8 bytes). uintptr_t guarantees perfect parity with the pointer size of the target system architecture.
 
-## 🎯 Usecase in push_swap
+## Usecase in push_swap
 
 Having a custom libftprintf.a library drastically simplifies debugging and operational logging in subsequent comprehensive projects, such as push_swap.
 
@@ -90,7 +90,7 @@ In push_swap, your application must manage two stacks (a and b) and print exact 
     ft_printf("Stack A [%i] -> Top: %d | Bottom: %d | Node Ptr: %p\n", index, stack_a->value, stack_a->prev->value, stack_a);
     ```
     This prevents you from having to daisy-chain distinct ft_putstr and ft_putnbr functions for every minor attribute inside a doubly-linked list node.
-## 📚 Resources & AI Disclosure
+## Resources & AI Disclosure
 Reference Material and Documentation:
 
 **Canonical Manuals: **Linux Man-pages (man 3 printf, man stdarg). This provided exhaustive details regarding expected behaviors, required return metrics, and edge cases representing undefined behavior.
