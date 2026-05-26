@@ -101,7 +101,6 @@ Reference Material and Documentation:
 
 ## AI Disclosure Statement:
 
-In strict compliance with Chapter III (AI Instructions) of the 42 School project guidelines, the utilization of artificial intelligence code-generation models to produce the functional logic of this software was completely excluded.
-
 **Development Process:** Every line of code from start to finish was designed, architecturalized, and written manually. The core mechanisms of the va_start, va_arg, and va_end macros were studied by examining memory alignment inside the call stack frame. All emerging bugs (such as handling INT_MIN arithmetic signs or the 0x0 address layout) were resolved independently using targeted main test instances and diff-checking outputs against the system printf.
+
 **Verification:** The codebase verified cleanly against the Francinette testing suite (printfTester by Tripouille), delivering full OK markings across all standard types. The code structure is thoroughly understood and ready for peer-to-peer evaluations.
